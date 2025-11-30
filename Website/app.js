@@ -1,11 +1,11 @@
 var firebaseConfig = {
-  apiKey: "AIzaSyATWYI4z-cBiZHIOIeBmTo8VcdZ-Mr9jBs",
-  authDomain: "plates-c2dfd.firebaseapp.com",
-  databaseURL: "https://plates-c2dfd-default-rtdb.firebaseio.com",
-  projectId: "plates-c2dfd",
-  storageBucket: "plates-c2dfd.firebasestorage.app",
-  messagingSenderId: "1001185177064",
-  appId: "1:1001185177064:web:b488e323ee1784cf74485d"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 firebase.initializeApp(firebaseConfig);
 var db = firebase.database();
