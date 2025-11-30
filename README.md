@@ -64,5 +64,5 @@ https://github.com/SarthakV7/AI-based-indian-license-plate-detection/blob/master
 4. When a plate is detected, the recognized number appears in the terminal  
 5. Open the website dashboard to approve entry requests and view system data  
 
-## Main Program Code (final.py)
+## Main Program Code (Code.py)
 (Already included in this repository)
