@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Smart Parking — Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <nav>
+    <div class="brand">Smart Parking</div>
+    <div class="navlinks">
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="slots.html">Slots</a>
+      <a href="pending.html">Pending</a>
+      <a href="history.html">History</a>
+    </div>
+  </nav>
+
+  <div class="container header">
+    <h1>Dashboard</h1>
+    <p>Parking analytics & revenue</p>
+  </div>
+
+  <div class="container">
+    <section class="stat-cards">
+      <div class="card"><h3>Total Slots</h3><div id="totalSlots">-</div></div>
+      <div class="card"><h3>Available</h3><div id="freeSlots">-</div></div>
+      <div class="card"><h3>Occupied</h3><div id="occupiedSlots">-</div></div>
+      <div class="card"><h3>Today's Revenue</h3><div id="revenueToday">₹0</div></div>
+      <div class="card"><h3>Total Revenue</h3><div id="revenueTotal">₹0</div></div>
+    </section>
+
+    <section class="graphSection">
+      <h3>Revenue (Last 7 Days)</h3>
+      <canvas id="revChart" height="120"></canvas>
+    </section>
+
+    <section class="currentListSection">
+      <h3>Currently Parked</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Plate</th><th>Slot</th><th>Entry Time</th><th>Payment</th></tr></thead>
+          <tbody id="currentList"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

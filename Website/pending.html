@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pending – Smart Parking</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="brand">Smart Parking</div>
+  <div class="navlinks">
+    <a href="index.html">Dashboard</a>
+    <a href="slots.html">Slots</a>
+    <a href="pending.html" class="active">Pending</a>
+    <a href="history.html">History</a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="header">
+    <h1>Pending Approvals</h1>
+  </div>
+
+  <div id="pendingContainer" class="pending-grid"></div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

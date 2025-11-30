@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Smart Parking — History</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <nav>
+    <div class="brand">Smart Parking</div>
+    <div class="navlinks">
+      <a href="index.html">Dashboard</a>
+      <a href="slots.html">Slots</a>
+      <a href="pending.html">Pending</a>
+      <a href="history.html" class="active">History</a>
+    </div>
+  </nav>
+
+  <div class="container header">
+    <h1>Parking History</h1>
+    <p>Download receipts for visits</p>
+  </div>
+
+  <div class="container">
+    <div class="search-box">
+      <input id="searchPlate" type="text" placeholder="Search by plate..." onkeyup="filterHistory()" />
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Plate</th>
+            <th>Slot</th>
+            <th>Entry</th>
+            <th>Exit</th>
+            <th>Hours</th>
+            <th>Fee</th>
+            <th>Payment</th>
+            <th>Receipt</th>
+          </tr>
+        </thead>
+        <tbody id="historyTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="app.js"></script>
+
+  <script>
+    function filterHistory(){
+      var q = document.getElementById('searchPlate').value.toUpperCase();
+      var rows = document.querySelectorAll('#historyTable tr');
+      rows.forEach(r => r.style.display = (r.innerText.toUpperCase().includes(q) ? '' : 'none'));
+    }
+  </script>
+</body>
+</html>
